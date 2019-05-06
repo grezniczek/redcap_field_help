@@ -27,7 +27,7 @@ This external module has no configuration settings.
 
 ## Usage
 
-In a field label (or a descriptive field), add a clickable element (e.g. an anchor tag `<a>` or a `<button>`) with the attribute `data-toggle-toggle` and optionally specifying a value that represents the name of the target (when no value is given, targets are assumed to be siblings of the toggling element).
+In a field label (or a descriptive field), add a clickable element (e.g. an anchor tag `<a>` or a `<button>`) with the attribute `data-toggle-toggle` and optionally specifying a value that represents the name of the target (when no value is given, targets are assumed to be within the same table row as the  toggling element).
 
 In the same field label (or anywhere else when using names), add an element (e.g. a `<span>` or `<div>`) with the attribute `data-toggle-target` (again with an optional value that represents the name and corresponds to a value used in a toggle element) and the attribute `data-toggle-hidden` (alternatively `hidden`) if the element should be hidden initially. When using `hidden`, the element will be hidden at design-time as well.
 
