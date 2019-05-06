@@ -10,6 +10,10 @@ In some cases it may be useful to present data entry or survey users with additi
 
 When enabled for a project, HTML elements (e.g. \<button>, \<a>, \<div>) with the attributes `data-toggle-toggle` and `data-toggle-target` will be enhanced so that clicking the toggle-element will toggle the visibility of target elements.
 
+## Limitations
+
+The toggle does not work within the designer.
+
 ## Requirements
 
 REDCAP 8.1.0 or newer (tested with REDCap 9.0.0 on a system running PHP 7.0.33).
@@ -32,6 +36,10 @@ In a field label (or a descriptive field), add a clickable element (e.g. an anch
 In the same field label (or anywhere else when using names), add an element (e.g. a `<span>` or `<div>`) with the attribute `data-toggle-target` (again with an optional value that represents the name and corresponds to a value used in a toggle element) and the attribute `data-toggle-hidden` (alternatively `hidden`) if the element should be hidden initially. When using `hidden`, the element will be hidden at design-time as well.
 
 Note that for links to be clickable, the `href` attribute has to be present.
+
+When activated for a project, the module will insert a help link into the field designer. When clicked, this will show a dialog box with usage instructions as well as the option to insert a template into the label.
+
+![Designer Help](images/design.png)
 
 ### Example field label
 

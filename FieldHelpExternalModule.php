@@ -20,20 +20,17 @@ class FieldHelpExternalModule extends AbstractExternalModule {
     }
 
 
-    public function redcap_data_entry_form_top(int $project_id, string $record = NULL, string $instrument, int $event_id, int $group_id = NULL, int $repeat_instance = 1) {
-        if ($project_id != null && intval($project_id) > 0) {
-            $this->injectFieldHelpJS();
-        }
-    }
-
-    public function redcap_survey_page_top(int $project_id, string $record = NULL, string $instrument, int $event_id, int $group_id = NULL, string $survey_hash, int $response_id = NULL, int $repeat_instance = 1 ) {
-        if ($project_id != null && intval($project_id) > 0) {
-            $this->injectFieldHelpJS();
-        }
-    }
-
     function redcap_every_page_top($project_id) {
-
+        $page = PAGE;
+        if (PAGE == "DataEntry/index.php" || PAGE == "surveys/index.php") {
+            if ($project_id != null && intval($project_id) > 0) {
+                $this->injectFieldHelpJS();
+            }
+        }
+        else if (PAGE == "Design/online_designer.php") {
+            $this->injectFieldHelpDesignJS();
+        }
+        
     }
 
 
@@ -43,6 +40,14 @@ class FieldHelpExternalModule extends AbstractExternalModule {
      */
     private function injectFieldHelpJS() {
         $jsUrl = $this->getUrl("fieldhelp.js");
+        print "<script type=\"text/javascript\" src=\"{$jsUrl}\"></script>";
+    }
+
+    /**
+     * Inject the JS to provide design-time help.
+     */
+    private function injectFieldHelpDesignJS() {
+        $jsUrl = $this->getUrl("fieldhelp_design.js");
         print "<script type=\"text/javascript\" src=\"{$jsUrl}\"></script>";
     }
 
