@@ -16,7 +16,7 @@ $(function() {
     })
     const targets = $('[data-toggle-target]')
     targets.each(function() {
-        if (this.hasAttribute('hidden')) {
+        if (this.hasAttribute('hidden') || this.hasAttribute('data-toggle-hidden')) {
             this.removeAttribute('hidden')
             $(this).hide()
         }

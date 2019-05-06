@@ -29,7 +29,7 @@ This external module has no configuration settings.
 
 In a field label (or a descriptive field), add a clickable element (e.g. an anchor tag `<a>` or a `<button>`) with the attribute `data-toggle-toggle` and optionally specifying a value that represents the name of the target (when no value is given, targets are assumed to be siblings of the toggling element).
 
-In the same field label (or anywhere else when using names), add an element (e.g. a `<span>` or `<div>`) with the attribute `data-toggle-target` (again with an optional value that represents the name and corresponds to a value used in a toggle element) and the attribute `hidden` if the element should be hidden initially. 
+In the same field label (or anywhere else when using names), add an element (e.g. a `<span>` or `<div>`) with the attribute `data-toggle-target` (again with an optional value that represents the name and corresponds to a value used in a toggle element) and the attribute `data-toggle-hidden` (alternatively `hidden`) if the element should be hidden initially. When using `hidden`, the element will be hidden at design-time as well.
 
 Note that for links to be clickable, the `href` attribute has to be present.
 
@@ -37,7 +37,7 @@ Note that for links to be clickable, the `href` attribute has to be present.
 
 ```html
 Tumorstadium T <a href="#" data-toggle-toggle="t" style="font-size:80%">(Hilfe)</a>
-<div hidden data-toggle-target="t" style="font-weight:normal; font-size:90%; margin-top:5px;"><b>TX</b> - keine Beurteilung möglich
+<div data-toggle-hidden data-toggle-target="t" style="font-weight:normal; font-size:90%; margin-top:5px;"><b>TX</b> - keine Beurteilung möglich
 <b>T0</b> - kein Anhalt für einen Primärtumor
 <b>T1</b> - Tumor auf den Uterus beschränkt
 <b>T2</b> - Tumor breitet sich auf andere Genitalstrukturen aus: Vagina, Ovarien, Lig. latum, Tube (Metastasen oder direkte Ausdehnung)</div>
@@ -50,5 +50,3 @@ Initial state:
 
 Toggled state:
 ![Toggled state](images/toggled_state.png)
-
-
