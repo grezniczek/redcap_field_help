@@ -22,7 +22,7 @@ REDCAP 8.1.0 or newer (tested with REDCap 9.0.0 on a system running PHP 7.0.33).
 
 - Clone this repo into `<redcap-root>/modules/redcap_field_help_v<version-number>`, or
 - Obtain this module from the Consortium REDCap Repo via the Control Center.
-- Go to Control Center > Technical / Developer Tools > External Modules and enable REDCap Survey Auth.
+- Go to Control Center > Technical / Developer Tools > External Modules and enable this module.
 - Enable the module for each project that needs the functionality provided by the module..
 
 ## Configuration
