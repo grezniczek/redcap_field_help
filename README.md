@@ -8,7 +8,7 @@ In some cases it may be useful to present data entry or survey users with additi
 
 ## Effect
 
-When enabled for a project, HTML elements (e.g. \<button>, \<a>, \<div>) with the attributes `data-toggle-toggle` and `data-toggle-target` will be enhanced so that clicking the toggle-element will toggle the visibility of target elements.
+When enabled for a project, HTML elements (e.g. `<button>`, `<a>`, `<div>`) with the attributes `data-toggle-toggle` and `data-toggle-target` will be enhanced so that clicking the toggle-element will toggle the visibility of target elements.
 
 ## Limitations
 
@@ -53,8 +53,21 @@ Tumorstadium T <a href="#" data-toggle-toggle="t" style="font-size:80%">(Hilfe)<
 
 Here, the link _'Hilfe'_ is set to toggle the visibility of a `<div>` that is initially hidden (set via the attribute `hidden`). The following screenshots illustrate this.
 
-Initial state:
+Initial state:  
+
 ![Default state](images/default_state.png)
 
-Toggled state:
+Toggled state:  
+
 ![Toggled state](images/toggled_state.png)
+
+## Testing
+
+Instructions for testing the module can be found [here](?prefix=redcap_field_help&page=tests/FieldHelpManualTest.md).
+
+## Change Log
+
+Version | Updates
+------- | ----
+1.1.0   | Change position of designer help link (due to Rich Text Editor).<br>Enhance insert functionality.<br>Add instructions for testing the module.
+1.0.0   | Initial release.
