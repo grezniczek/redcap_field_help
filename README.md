@@ -1,4 +1,4 @@
-# REDCap Field Help
+# Field Help
 
 A REDCap External Module that provides field help toggles.
 
