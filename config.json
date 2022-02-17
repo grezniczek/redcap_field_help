@@ -2,6 +2,7 @@
     "name": "Field Help",
     "namespace": "RUB\\FieldHelpExternalModule",
     "description": "Adds toggle-able field help to data entry forms and surveys. <strong><a href=\"https://github.com/grezniczek/redcap_field_help\">See full documentation here</a></strong>.",
+    "framework-version": 8,
     "permissions": [
         "redcap_every_page_top"
     ],

@@ -24,7 +24,9 @@ class FieldHelpExternalModule extends AbstractExternalModule {
      * Inject the JS necessary to process field help data-attributes.
      */
     private function injectFieldHelpJS() {
-        $jsUrl = $this->getUrl("fieldhelp.js");
+        /** @var \ExternalModules\Framework */
+        $fw = $this->framework;
+        $jsUrl = $fw->getUrl("fieldhelp.js");
         print "<script type=\"text/javascript\" src=\"{$jsUrl}\"></script>";
     }
 
@@ -32,7 +34,9 @@ class FieldHelpExternalModule extends AbstractExternalModule {
      * Inject the JS to provide design-time help.
      */
     private function injectFieldHelpDesignJS() {
-        $jsUrl = $this->getUrl("fieldhelp_design.js");
+        /** @var \ExternalModules\Framework */
+        $fw = $this->framework;
+        $jsUrl = $fw->getUrl("fieldhelp_design.js");
         print "<script type=\"text/javascript\" src=\"{$jsUrl}\"></script>";
     }
 }
