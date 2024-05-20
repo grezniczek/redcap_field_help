@@ -2,25 +2,12 @@
     "name": "Field Help",
     "namespace": "RUB\\FieldHelpExternalModule",
     "description": "Adds toggle-able field help to data entry forms and surveys. <strong><a href=\"https://github.com/grezniczek/redcap_field_help\">See full documentation here</a></strong>.",
-    "framework-version": 8,
-    "permissions": [
-        "redcap_every_page_top"
-    ],
+    "framework-version": 12,
     "authors": [
         {
             "name": "Günther Rezniczek",
             "email": "guenther.rezniczek@rub.de",
             "institution": "Ruhr-Universität Bochum"
         }
-    ],
-    "system-settings": [
-    ],
-    "project-settings": [
-    ],
-    "compatibility": {
-        "php-version-min": "5.6.0",
-        "php-version-max": "",
-        "redcap-version-min": "8.1.0",
-        "redcap-version-max": ""
-     }
+    ]
 }
