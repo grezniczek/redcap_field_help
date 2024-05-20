@@ -1,6 +1,6 @@
 # Field Help - Manual Testing Procedure
 
-Version 1 - 2020-04-12
+Version 2 - 2024-05-20
 
 ## Prerequisites
 
@@ -17,19 +17,16 @@ Version 1 - 2020-04-12
    - The "How to use Field Help" link is shown below the field label textarea.
 1. Click on the "How to use Field Help" link and verify the following:
    - The "How to use Field Help Editor" popup is shown.
-   - The popup contains a text box ("Enter a Toggle ID") with a button.
-1. Enter "h1" into the text box and press the button next to it.
+   - The popup contains an **Add** button, a text box ("Enter a Toggle ID"), and a dropdown.
+1. Enter "h1" into the text box, select 'Inline' and press the **Add** button.
 1. Verify the following:
    - The popup has closed.
-   - The _Field Label_ now contains the following text: ` <a href="#" data-toggle-toggle="h1">Help Toggle</a><div data-toggle-hidden data-toggle-target="h1">Insert help text here.</div>`
-1. Turn on the _Use the Rich Text Editor_ option.
-1. Click on the "How to use Field Help" link again and verify the following:
-   - Instead of the text box, the popup contains a red notice about turning off the rich text editor.
-1. Close the popup and save the field.
+   - The _Field Label_ now contains the following text: ` <a href="#" data-toggle-toggle="h1" data-toggle-mode="inline">Help Toggle <i class="fa-solid fa-info-cirlce"></i></a><div data-toggle-hidden data-toggle-target="h1">Insert help content here.</div>`
+1. Save the field.
 1. Open the instrument for data entry in a (new) record and verify the following:
-   - Clicking on the _Help Toggle_ link toggles display of the help text ("Insert help text here.")
+   - Clicking on the _Help Toggle_ link toggles display of the help text ("Insert help content here.")
 1. Open the instrument as a survey and verify the following:
-   - Clicking on the _Help Toggle_ link toggles display of the help text ("Insert help text here.")
+   - Clicking on the _Help Toggle_ link toggles display of the help text ("Insert help content here.")
 
 Done.
 

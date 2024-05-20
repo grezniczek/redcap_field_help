@@ -16,7 +16,7 @@ The toggle does not work within the designer.
 
 ## Requirements
 
-REDCAP 8.1.0 or newer (tested with REDCap 9.0.0 on a system running PHP 7.0.33).
+REDCap with Framework 12 support or newer.
 
 ## Installation
 
@@ -31,7 +31,7 @@ This external module has no configuration settings.
 
 ## Usage
 
-In a field label (or a descriptive field), add a clickable element (e.g. an anchor tag `<a>` or a `<button>`) with the attribute `data-toggle-toggle` and optionally specifying a value that represents the name of the target (when no value is given, targets are assumed to be within the same table row as the  toggling element).
+In a field label (or a descriptive field), add a clickable element (e.g. an anchor tag `<a>` or a `<button>`) with the attribute `data-toggle-toggle` and optionally specifying a value that represents the name of the target (when no value is given, targets are assumed to be within the same table row as the  toggling element). Optionally, add the `data-toggle-mode` attribute to control display behavior. Possible modes are `inline`, `tooltip-top`, `tooltip-bottom`, `tooltip-left`, and `tooltip-right`.
 
 In the same field label (or anywhere else when using names), add an element (e.g. a `<span>` or `<div>`) with the attribute `data-toggle-target` (again with an optional value that represents the name and corresponds to a value used in a toggle element) and the attribute `data-toggle-hidden` (alternatively `hidden`) if the element should be hidden initially. When using `hidden`, the element will be hidden at design-time as well.
 
@@ -41,11 +41,11 @@ When activated for a project, the module will insert a help link into the field 
 
 ![Designer Help](images/design.png)
 
-### Example field label
+### Example field label (inline)
 
 ```html
-Tumorstadium T <a href="#" data-toggle-toggle="t" style="font-size:80%">(Hilfe)</a>
-<div data-toggle-hidden data-toggle-target="t" style="font-weight:normal; font-size:90%; margin-top:5px;"><b>TX</b> - keine Beurteilung möglich
+Tumorstadium T <a href="#" data-toggle-toggle="t1" data-toggle-mode="inline" style="font-size:80%">(Hilfe)</a>
+<div data-toggle-hidden data-toggle-target="t1" style="font-weight:normal; font-size:90%; margin-top:5px;"><b>TX</b> - keine Beurteilung möglich
 <b>T0</b> - kein Anhalt für einen Primärtumor
 <b>T1</b> - Tumor auf den Uterus beschränkt
 <b>T2</b> - Tumor breitet sich auf andere Genitalstrukturen aus: Vagina, Ovarien, Lig. latum, Tube (Metastasen oder direkte Ausdehnung)</div>
@@ -59,7 +59,21 @@ Initial state:
 
 Toggled state:  
 
-![Toggled state](images/toggled_state.png)
+![Toggled state, inline](images/toggled_state.png)
+
+### Example field label (tooltip)
+
+```html
+Tumorstadium T <a href="#" data-toggle-toggle="t2" data-toggle-mode="tooltip-bottom" style="font-size:80%">(Hilfe)</a>
+<div data-toggle-hidden data-toggle-target="t2" style="font-weight:normal; font-size:90%; margin-top:5px;"><b>TX</b> - keine Beurteilung möglich
+<b>T0</b> - kein Anhalt für einen Primärtumor
+<b>T1</b> - Tumor auf den Uterus beschränkt
+<b>T2</b> - Tumor breitet sich auf andere Genitalstrukturen aus: Vagina, Ovarien, Lig. latum, Tube (Metastasen oder direkte Ausdehnung)</div>
+```
+
+Toggled state:
+
+![Toggled state, tooltip](images/toggled_tooltip.png)
 
 ## Testing
 
@@ -69,5 +83,6 @@ Instructions for testing the module can be found [here](?prefix=redcap_field_hel
 
 Version | Updates
 ------- | ----
+2.0.0   | Add support for tooltip display.
 1.1.0   | Change position of designer help link (due to Rich Text Editor).<br>Enhance insert functionality.<br>Add instructions for testing the module.
 1.0.0   | Initial release.
