@@ -26,8 +26,12 @@ class FieldHelpExternalModule extends AbstractExternalModule {
     private function injectFieldHelpJS() {
         /** @var \ExternalModules\Framework */
         $fw = $this->framework;
-        $jsUrl = $fw->getUrl("fieldhelp.js");
-        print "<script type=\"text/javascript\" src=\"{$jsUrl}\"></script>";
+        $fw->initializeJavascriptModuleObject();
+        $jsmo_name = $fw->getJavascriptModuleObjectName();
+        $js = file_get_contents(__DIR__ . "/fieldhelp.js");
+        $js = str_replace("{JSMO}", $jsmo_name, $js);
+        print \RCView::script($js, true);
+        print \RCView::style("[data-toggle-hidden] { display: none; }");
     }
 
     /**

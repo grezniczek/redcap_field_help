@@ -83,6 +83,7 @@ Instructions for testing the module can be found [here](?prefix=redcap_field_hel
 
 Version | Updates
 ------- | ----
+2.1.0   | Adds support for MLM (refreshes after language change).
 2.0.0   | Add support for tooltip display.
 1.1.0   | Change position of designer help link (due to Rich Text Editor).<br>Enhance insert functionality.<br>Add instructions for testing the module.
 1.0.0   | Initial release.
